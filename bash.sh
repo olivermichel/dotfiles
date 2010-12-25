@@ -17,4 +17,12 @@ parse_git_branch () {
 
 export PS1="\[\033[0;32m\]\u@\h \[\033[0;36m\]\w\[\033[0m\] \[\033[0;35m\]\$(parse_git_branch)\[\033[0;38m\]\n> \$ "
 
+# bash calculator
+? () { echo "$*" | bc -l; }
 
+alias reload='source ~/.bashrc'
+alias back='cd $OLDPWD'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias home='cd ~/'
