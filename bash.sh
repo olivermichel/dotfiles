@@ -4,10 +4,13 @@
 
 export CLICOLOR=1
 export LSCOLORS=gxxxxxxxcxxxxxcxcxexex
+export GREP_OPTIONS="--color=auto"
+export GREP_COLOR="4;33"
 
 alias la="ls -a"
-alias ll="ls -l"
-alias lla="ls -la"
+alias ll="ls -lh"
+alias lla="ls -lah"
+alias t="tree -aC"
 
 # command line customization
 
