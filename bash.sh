@@ -31,3 +31,4 @@ alias ....="cd ../../.."
 alias home='cd ~/'
 
 alias watchlog='watch -d -n 1 tail -n 25'
+alias gittree='git log --graph --oneline --decorate'
