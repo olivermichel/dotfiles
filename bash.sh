@@ -10,7 +10,7 @@ export GREP_COLOR="4;33"
 alias la="ls -a"
 alias ll="ls -lh"
 alias lla="ls -lah"
-alias t="tree -aC"
+alias tree="tree -FAC"
 
 # command line customization
 
