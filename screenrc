@@ -1,0 +1,7 @@
+shell -${SHELL}
+
+hardstatus alwayslastline "[%H][%-Lw %{bw} %n %t %{dd} %+Lw]%-=[%c]"
+
+defscrollback 1024
+startup_message off
+bind ' ' windowlist -b 

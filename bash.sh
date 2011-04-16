@@ -24,11 +24,12 @@ export PS1="\[\033[0;32m\]\u@\h \[\033[0;36m\]\w\[\033[0m\] \[\033[0;35m\]\$(par
 ? () { echo "$*" | bc -l; }
 
 alias reload='source ~/.bashrc'
-alias back='cd $OLDPWD'
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias home='cd ~/'
 
 alias watchlog='watch -d -n 1 tail -n 25'
 alias gittree='git log --graph --oneline --decorate'
+
+alias g='git'
