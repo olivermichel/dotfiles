@@ -1,3 +1,7 @@
+[user]
+	name = Oliver Michel
+  email = oliver.michel@editum.de
+
 [color]
 	status = auto
 	branch = auto
@@ -18,3 +22,4 @@
 	c = commit
 	cm = commit -m
 	ca = commit --amend
+	

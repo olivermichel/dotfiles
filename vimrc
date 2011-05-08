@@ -1,7 +1,11 @@
 set number
 set scrolloff=999
-"set syntax
 set encoding=utf-8
+
+filetype plugin on
+filetype indent on
+
+set syntax
 
 set laststatus=2
 set statusline=
@@ -18,3 +22,14 @@ set ruler
 set wildmenu
 set visualbell
 set autoread
+
+set so=7
+
+set shiftwidth=2
+set tabstop=2
+
+set ai "Auto indent
+set si "Smart indet
+set wrap "Wrap lines
+
+map <space> /	
