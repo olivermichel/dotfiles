@@ -1,7 +1,3 @@
-[user]
-	name = Oliver Michel
-  email = oliver.michel@editum.de
-
 [color]
 	status = auto
 	branch = auto
@@ -18,6 +14,7 @@
   r = reset
   p = push
 	t = log --graph --oneline --decorate
+	tree = log --graph --oneline --decorate
 	c = commit
 	cm = commit -m
 	ca = commit --amend

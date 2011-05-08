@@ -23,8 +23,10 @@ parse_git_branch() {
 }
 
 rvm_version() {
-	if [ "$(~/.rvm/bin/rvm-prompt i v)" != "" ]; 
-		then echo "[$(~/.rvm/bin/rvm-prompt i)] "; 
+	if [ -x $HOME/.rvm/bin/rvm ]; then
+		if [ "$(~/.rvm/bin/rvm-prompt i v)" != "" ]; 
+			then echo "[$(~/.rvm/bin/rvm-prompt i)] "; 
+		fi
 	fi
 }
 
@@ -38,8 +40,7 @@ alias reload='source ~/.bashrc'
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+alias .....="cd ../../../.."
 
-alias watchlog='watch -d -n 1 tail -n 25'
-alias gittree='git log --graph --oneline --decorate'
-
+alias watch='watch -d -n 1 tail -n 25'
 alias g='git'
