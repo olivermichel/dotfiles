@@ -12,14 +12,14 @@
 	d = diff
 	a = add
 	co = checkout
+	ci = checkin
+	cim = commit -m
+	cia = commit --amend
 	b = branch
   l = log
   f = fetch
   r = reset
-  p = push
+  ps = push
+  pl = pull
 	t = log --graph --oneline --decorate
 	tree = log --graph --oneline --decorate
-	c = commit
-	cm = commit -m
-	ca = commit --amend
-	
