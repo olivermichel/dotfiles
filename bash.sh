@@ -44,3 +44,4 @@ alias .....="cd ../../../.."
 
 alias watch='watch -d -n 1 tail -n 25'
 alias g='git'
+alias r='rails'
