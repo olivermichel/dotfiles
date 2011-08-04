@@ -14,9 +14,9 @@ IRB.conf[:AUTO_INDENT] = true
 require 'ap'
 
 ## Wirble
-require 'wirble'
-Wirble.init
-Wirble.colorize
+#require 'wirble'
+#Wirble.init
+#Wirble.colorize
 
 alias q exit
 
