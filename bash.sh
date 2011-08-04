@@ -5,7 +5,7 @@
 export CLICOLOR=1
 export LSCOLORS=gxxxxxxxcxxxxxcxcxexex
 export GREP_OPTIONS="--color=auto"
-export GREP_COLOR="4;33"
+export GREP_COLOR="4;36"
 
 alias la="ls -a"
 alias ll="ls -lh"
