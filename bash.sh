@@ -25,7 +25,7 @@ parse_git_branch() {
 rvm_version() {
 	if [ -x $HOME/.rvm/bin/rvm ]; then
 		if [ "$(~/.rvm/bin/rvm-prompt i v)" != "" ]; 
-			then echo "[$(~/.rvm/bin/rvm-prompt i)] "; 
+			then echo "[$(~/.rvm/bin/rvm-prompt)] "; 
 		fi
 	fi
 }
@@ -42,7 +42,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias watch='watch -d -n 1 tail -n 25'
+alias watchfile='watch -d -n 1 tail -n 25'
 alias g='git'
 alias r='rails'
 alias gh='github'
