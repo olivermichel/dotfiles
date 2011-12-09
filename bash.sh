@@ -42,7 +42,17 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-alias watchfile='watch -d -n 1 tail -n 25'
+alias watchf='watch -d -n 1 tail -n 25'
 alias g='git'
 alias r='rails'
+alias sub='subl'
 alias gh='github'
+
+# OSX only: opens a new tab at the current working directory
+nt() {
+	osascript -e "
+		tell application \"System Events\" to tell process \"Terminal\" to keystroke \"t\" using command down
+		tell application \"Terminal\" to do script \"cd \\\"$(PWD)\\\"\" in selected tab of the front window
+	" > /dev/null 2>&1
+}
+
