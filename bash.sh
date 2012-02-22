@@ -47,6 +47,7 @@ alias g='git'
 alias r='rails'
 alias sub='subl'
 alias gh='github'
+alias h='history | grep'
 
 # OSX only: opens a new tab at the current working directory
 nt() {
