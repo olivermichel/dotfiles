@@ -54,10 +54,12 @@ alias .....="cd ../../../.."
 
 alias watchf='watch -d -n 1 tail -n 25'
 alias g='git'
-alias r='rails'
+#alias r='rails'
 alias sub='subl'
 alias gh='github'
 alias h='history | grep'
+
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # OSX only: opens a new tab at the current working directory
 nt() {

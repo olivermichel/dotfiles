@@ -12,7 +12,7 @@
 	d = diff
 	a = add
 	co = checkout
-	ci = checkin
+	ci = commit 
 	cim = commit -m
 	cia = commit --amend
 	b = branch

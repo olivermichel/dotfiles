@@ -5,7 +5,7 @@ set encoding=utf-8
 filetype plugin on
 filetype indent on
 
-set syntax
+syntax on
 
 set laststatus=2
 set statusline=
