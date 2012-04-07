@@ -117,4 +117,4 @@ function hsum() {
   history|awk '{a[$2]++}END{for(i in a){printf"%5d\t%s\n",a[i],i}}'|sort -nr|head;
 }
 
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
