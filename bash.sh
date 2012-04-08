@@ -117,4 +117,15 @@ function hsum() {
   history|awk '{a[$2]++}END{for(i in a){printf"%5d\t%s\n",a[i],i}}'|sort -nr|head;
 }
 
+function loadavgs() {
+  uptime |  cut -d "," -f 3-5 | awk '{print $3, $4, $5}' | tr -d ','
+}
+
+function freemem() {
+  if [[ $OSTYPE == linux-gnu ]]; then
+    mem=`free -m | grep 'Mem' | awk '{print $4}'`
+    echo $mem"MB"
+  fi
+}
+
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
