@@ -32,4 +32,6 @@ set ai "Auto indent
 set si "Smart indet
 set wrap "Wrap lines
 
+set nocompatible
+
 map <space> /	
