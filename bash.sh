@@ -129,3 +129,27 @@ function freemem() {
 }
 
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+function h2d() { 
+  echo "ibase=16; obase=A; $1" | bc 
+}
+
+function d2h() { 
+  echo "ibase=10; obase=16; $1" | bc 
+}
+
+function b2d() { 
+  echo "ibase=2; obase=1010; $1" | bc 
+}
+
+function d2b() { 
+  echo "ibase=10; obase=2; $1" | bc 
+}
+
+function b2h() { 
+  echo "ibase=2; obase=10000; $1" | bc 
+}
+
+function h2b() { 
+  echo "ibase=16; obase=2; $1" | bc 
+}
