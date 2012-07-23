@@ -14,12 +14,26 @@ alias tree="tree -FAC"
 
 # command line customization
 
-parse_git_dirty() {
+git_dirty() {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 
-parse_git_branch() {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
+git_branch() {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(git_dirty))/"
+}
+
+svn_branch() {
+  local url=
+  if [[ -d .svn ]]; then
+    url=`svn info | awk '/URL:/ {print $2}'`
+    if [[ $url =~ trunk ]]; then
+      echo "(trunk)"
+    elif [[ $url =~ /branches/ ]]; then
+      echo $url | sed -e '(s#^.*/\(branches/.*\)/.*$#\1#)'
+    elif [[ $url =~ /tags/ ]]; then
+      echo $url | sed -e '(s#^.*/\(tags/.*\)/.*$#\1#)'
+    fi
+  fi
 }
 
 rbenv_version() {
@@ -40,7 +54,8 @@ rvm_version() {
   fi
 }
 
-export PS1="\[\033[0;32m\]\u@\h \[\033[0;37m\]\$(rbenv_version)\$(rvm_version)\033[0m\]\[\033[0;36m\]\w\[\033[0m\] \[\033[0;35m\]\$(parse_git_branch)\[\033[0;38m\]\n> \$ "
+export PS1="\[\033[0;32m\]\u@\h \[\033[0;37m\]\$(rbenv_version)\$(rvm_version)\033[0m\]\[\033[0;36m\]\w\[\033[0m\] \[\033[0;35m\]\$(git_branch)\$(svn_branch)\[\033[0;38m\]\n> \$ "
+export PS2=" .. "
 
 # bash calculator
 ? () { echo "$*" | bc -l; }
