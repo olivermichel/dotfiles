@@ -54,7 +54,7 @@ rvm_version() {
   fi
 }
 
-export PS1="\[\033[0;32m\]\u@\h \[\033[0;37m\]\$(rbenv_version)\$(rvm_version)\[\033[0m\]\[\033[0;36m\]\w\[\033[0m\] \[\033[0;35m\]\$(git_branch)\$(svn_branch)\[\033[0;38m\]\n> \$ "
+export PS1="\[\033[0;32m\]\u@\h \[\033[0;37m\]\$(rbenv_version)\$(rvm_version)\[\033[0m\]\[\033[0;36m\]\w\[\033[0m\] \[\033[0;35m\]\$(git_branch)\$(svn_branch)\[\033[0m\]\n> \$ "
 export PS2=" .. "
 
 # bash calculator
