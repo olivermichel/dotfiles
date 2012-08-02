@@ -21,5 +21,6 @@
   r = reset
   ps = push
   pl = pull
+  sub = submodule
 	t = log --graph --oneline --decorate
 	tree = log --graph --oneline --decorate
