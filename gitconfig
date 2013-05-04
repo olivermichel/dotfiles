@@ -1,26 +1,26 @@
 [user]
-	name = Oliver Michel
+  name = Oliver Michel
   email = oliver.michel@editum.de
 
 [color]
-	status = auto
-	branch = auto
-	diff = auto
+  status = auto
+  branch = auto
+  diff = auto
 
 [alias]	
-	s = status
-	d = diff
-	a = add
-	co = checkout
-	ci = commit 
-	cim = commit -m
-	cia = commit --amend
-	b = branch
+  s = status
+  d = diff
+  a = add
+  co = checkout
+  ci = commit 
+  cim = commit -m
+  cia = commit --amend
+  b = branch
   l = log
   f = fetch
   r = reset
   ps = push
   pl = pull
   sub = submodule
-	t = log --graph --oneline --decorate
-	tree = log --graph --oneline --decorate
+  t = log --graph --oneline --decorate
+  tree = log --graph --oneline --decorate
