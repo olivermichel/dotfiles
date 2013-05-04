@@ -76,11 +76,6 @@ cdl() {
   fi
 }
 
-# warn when attempting to override files
-alias rm='rm -I'
-alias cp='cp -I'
-alias mv='mv -I'
-
 # allow full paths when mkdir
 alias mkdir='mkdir -p'
 
