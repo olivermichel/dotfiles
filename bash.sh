@@ -12,6 +12,14 @@ alias ll="ls -lh"
 alias lla="ls -lah"
 alias tree="tree -FAC"
 
+
+inpath () {
+  ! [ $# -eq 1 ] && echo "usage: inpath <file>" && return 1
+  f="$(which "$1" 2>/dev/null)"
+  [ -f "$f" ] && return 0
+  return 1
+}
+
 # command line customization
 
 git_dirty() {
