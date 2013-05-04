@@ -124,7 +124,6 @@ alias ql='qlmanage -p "$@" >& /dev/null'
 # application shortcuts
 alias g='git'
 alias rl='rails'
-alias sub='subl'
 alias gh='github'
 
 # history-related
