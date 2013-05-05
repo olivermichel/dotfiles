@@ -1,12 +1,12 @@
-# colors for ls
+# enable cli colors
 export CLICOLOR=1
-export LSCOLORS=gxxxxxxxcxxxxxcxcxexex
 
 # colors for grep
 export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="4;36"
 
 # ls customizations
+alias ls="ls -F --color=auto"
 alias la="ls -a"
 alias ll="ls -lh"
 alias lla="ls -lah"
@@ -39,6 +39,9 @@ showpath() {
 # history-related
 alias h='history'
 alias hg='history | grep'
+
+# git
+alias g=git
 
 # show public ip
 publicip() {
