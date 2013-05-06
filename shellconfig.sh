@@ -92,7 +92,7 @@ git_info() {
   fi
 
   if [[ "$gstatus" == *"Changes not staged for commit"* ]]; then
-    output+="+"
+    output+="*"
   fi
   
   echo $output
