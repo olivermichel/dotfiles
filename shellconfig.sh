@@ -90,6 +90,10 @@ git_info() {
   if [[ "$gstatus" == *"Untracked files"* ]]; then
     output+="+"
   fi
+
+  if [[ "$gstatus" == *"Changes not staged for commit"* ]]; then
+    output+="+"
+  fi
   
   echo $output
 }
