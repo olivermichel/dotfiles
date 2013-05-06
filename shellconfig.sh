@@ -1,15 +1,28 @@
-# enable cli colors
+# enable cli colors on BSD
 export CLICOLOR=1
+
+# ls colors & customization
+# file -> white, dir -> cyan, sym -> magenta, socket -> red, pipe -> red
+# exec -> green, block -> grey, char -> grey
+
+if [[ $OSTYPE == linux-gnu ]]; then
+  export LS_COLORS="no=00:di=36:fi=00:ln=35:ex=32:so=31:pi=31:bd=37:cd=37"
+  alias ls="ls -F --color=auto"
+  alias la="ls -F --color=auto -a"
+  alias ll="ls -F --color=auto -lh"
+  alias lla="ls -F --color=auto -lah"
+elif [[ $OSTYPE == darwin12.0 ]]; then
+  export LSCOLORS="gxfxbxbxcxhxhxcxcxgxgx"
+  alias ls="ls -F -G"
+  alias la="ls -F -G -a"
+  alias ll="ls -F -G -lh"
+  alias lla="ls -F -G -lah"
+fi
 
 # colors for grep
 export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="4;36"
 
-# ls customizations
-alias ls="ls -F --color=auto"
-alias la="ls -a"
-alias ll="ls -lh"
-alias lla="ls -lah"
 alias tree="tree -FAC"
 
 # cd up the hierachy
