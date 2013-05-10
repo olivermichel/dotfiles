@@ -1,3 +1,5 @@
+let &t_Co=256
+
 " line numbers
 set number
 
@@ -19,7 +21,7 @@ filetype indent on
 
 " syntax coloring
 syntax enable
-colorscheme default 
+colorscheme grb256 
 set background=dark
 
 " enable wildmenu
@@ -29,7 +31,7 @@ set wildmenu
 set smartcase
 
 " height of the command bar
-set cmdheight=2
+set cmdheight=1
 
 " highlight search results
 set hlsearch
@@ -56,3 +58,4 @@ set expandtab
 set smarttab
 set shiftwidth=2
 set tabstop=2
+
