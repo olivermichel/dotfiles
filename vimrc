@@ -1,37 +1,58 @@
+" line numbers
 set number
+
+" history
+set history=700
+
+" filetype extensions
+filetype plugin on
+filetype indent on
+
+" re-read file when modified externally
+set autoread
+
 set scrolloff=999
 set encoding=utf-8
 
 filetype plugin on
 filetype indent on
 
-syntax on
+" syntax coloring
+syntax enable
+colorscheme default 
+set background=dark
 
-set laststatus=2
+" enable wildmenu
+set wildmenu
+
+" try to be smart about cases when searching
+set smartcase
+
+" height of the command bar
+set cmdheight=2
+
+" highlight search results
+set hlsearch
+
+" incremental search
+set incsearch
+
+" show matching brackets when cursor over bracket
+set showmatch
+
+set laststatus=2				" always show the status line
 set statusline=
 set statusline+=%-3.3n\                         " buffer number
 set statusline+=%f\                             " filename
 set statusline+=%h%m%r%w                        " status flags
 set statusline+=\[%{strlen(&ft)?&ft:'none'}]    " file type
 set statusline+=%=                              " right align remainder
-set statusline+=0x%-8B                          " character value
-set statusline+=%-14(%l,%c%V%)                  " line, character
-set statusline+=%<%P                            " file position
+set statusline+=%-14(%l,%c%V%) " line, character
 
 set ruler
-set wildmenu
-set visualbell
-set autoread
 
-set so=7
-
+" spaces instead of tabs, 1 tab = 2 spaces
+set expandtab
+set smarttab
 set shiftwidth=2
 set tabstop=2
-
-set ai "Auto indent
-set si "Smart indet
-set wrap "Wrap lines
-
-set nocompatible
-
-map <space> /	
