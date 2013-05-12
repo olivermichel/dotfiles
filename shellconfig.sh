@@ -131,12 +131,9 @@ loads() {
   fi
 }
 
-# show rbenv version if installed
-rbenv_info() {
-
-  if [ -x "$(which rbenv)" ]; then
-    if [ "$(rbenv version-name)" != "system" ]; then
-      echo "[$(rbenv version-name)] ";
-    fi
-  fi
+# show ruby version if rbenv installed
+rb_info() {
+  local ruby_version
+  ruby_version=$(rbenv version 2> /dev/null) || return
+  echo "‹r$ruby_version" | sed 's/[ \t].*$/›/'
 }
