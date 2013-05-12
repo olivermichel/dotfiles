@@ -23,6 +23,7 @@ fi
 export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="4;36"
 
+alias c="clear"
 alias tree="tree -FAC"
 
 # cd up the hierachy
