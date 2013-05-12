@@ -138,3 +138,9 @@ rb_info() {
   ruby_version=$(rbenv version 2> /dev/null) || return
   echo "‹r$ruby_version" | sed 's/[ \t].*$/›/'
 }
+
+py_info() {
+  local python_version
+  python_version=$(pyenv version 2> /dev/null) || return
+  echo "‹p$python_version" | sed 's/[ \t].*$/›/'
+}
