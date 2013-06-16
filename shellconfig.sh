@@ -11,12 +11,14 @@ if [[ $OSTYPE == linux-gnu ]]; then
   alias la="ls -F --color=auto -a"
   alias ll="ls -F --color=auto -lh"
   alias lla="ls -F --color=auto -lah"
-elif [[ $OSTYPE == darwin12.0 ]]; then
+  alias ll.="ls -F --color=auto -lah"
+elif [[ $OSTYPE == darwin12.3.0 ]]; then
   export LSCOLORS="gxfxbxbxcxhxhxcxcxgxgx"
   alias ls="ls -F -G"
   alias la="ls -F -G -a"
   alias ll="ls -F -G -lh"
   alias lla="ls -F -G -lah"
+  alias ll.="ls -F -F -lah"
 fi
 
 # colors for grep
