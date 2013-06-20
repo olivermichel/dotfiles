@@ -20,6 +20,9 @@ source ~/.dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # use history substring completion
 source ~/.dotfiles/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+# use ^R incremental search
+bindkey '^R' history-incremental-search-backward
+
 # bind UP and DOWN arrow keys
 for keycode in '[' '0'; do
   bindkey "^[${keycode}A" history-substring-search-up
