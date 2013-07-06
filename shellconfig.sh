@@ -7,15 +7,19 @@ export CLICOLOR=1
 
 if [[ $OSTYPE == linux-gnu ]]; then
   export LS_COLORS="no=00:di=36:fi=00:ln=35:ex=32:so=31:pi=31:bd=37:cd=37"
+  alias l="ls -F --color=auto"
   alias ls="ls -F --color=auto"
   alias la="ls -F --color=auto -a"
+  alias l.="ls -F --color=auto -a"
   alias ll="ls -F --color=auto -lh"
   alias lla="ls -F --color=auto -lah"
   alias ll.="ls -F --color=auto -lah"
 elif [[ $OSTYPE == darwin12.3.0 ]]; then
   export LSCOLORS="gxfxbxbxcxhxhxcxcxgxgx"
+  alias l="ls -F -G"
   alias ls="ls -F -G"
   alias la="ls -F -G -a"
+  alias l.="ls -F -G -a"
   alias ll="ls -F -G -lh"
   alias lla="ls -F -G -lah"
   alias ll.="ls -F -F -lah"
@@ -25,6 +29,10 @@ fi
 export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="4;36"
 
+# set input mode to emacs-mode
+set -o emacs
+
+# some aliases
 alias c="clear"
 alias tree="tree -FAC"
 
@@ -54,7 +62,6 @@ showpath() {
 
 # history-related
 alias h='history'
-alias hg='history | grep'
 
 # git
 alias g=git
