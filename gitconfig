@@ -16,14 +16,12 @@
   cim = commit -m
   cia = commit --amend
   b = branch
-  l = log
   f = fetch
   r = reset
   ps = push
   pl = pull
   sub = submodule
-  t = log --graph --oneline --decorate
-  tree = log --graph --oneline --decorate
+  l = log --decorate --graph --date=short --pretty=format:'%C(green)%d %C(cyan)%h %C(magenta)%ad %C(yellow)%an %C(white)%s'
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
