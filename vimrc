@@ -39,14 +39,13 @@ set incsearch
 " show matching brackets when cursor over bracket
 set showmatch
 
-set laststatus=2                                " always show the status line
+set laststatus=2                                  " always show the status line
 set statusline=
-set statusline+=%-3.3n\                         " buffer number
-set statusline+=%f\                             " filename
-set statusline+=%h%m%r%w                        " status flags
-set statusline+=\[%{strlen(&ft)?&ft:'none'}]    " file type
-set statusline+=%=                              " right align remainder
-set statusline+=%-14(%l,%c%V%)                  " line, character
+set statusline+=\[%n\]                            " buffer number
+set statusline+=\[%f/%{strlen(&ft)?&ft:'?'}]      " filename and type
+set statusline+=\[%h%m%r%w\]                      " status flags
+set statusline+=%=                                " right align remainder
+set statusline+=\[%l/%L\]                         " line/total lines
 
 set ruler
 
@@ -67,3 +66,8 @@ set noswapfile
 set mouse=a
 
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
+" use te for tabedit
+cabbrev te tabedit
+cabbrev t newtab
+
