@@ -46,3 +46,7 @@ compctl -W ~/mnt/ -/ mnt
 PROMPT="%{$fg[green]%}%n@%m%{$reset_color%} %{$fg[cyan]%}%~%{$reset_color%} %{$fg[white]%}\$(rb_info)%{$reset_color%} %{$fg[white]%}\$(py_info)%{$reset_color%} %{$fg[magenta]%}\$(git_branch)%{$reset_color%}
 %# "
 RPROMPT="%{$fg[red]%}%(?..%?)%{$reset_color%}"
+
+local _ssh_hosts
+[ -r ~/.ssh/config ] && _ssh_hosts=($(cat ~/.ssh/config | sed -ne 's/Host[=\t ]//p')) || _ssh_hosts=()
+zstyle ':completion:*:hosts' hosts $_ssh_hosts
