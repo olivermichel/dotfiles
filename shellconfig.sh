@@ -25,6 +25,10 @@ elif [[ $OSTYPE == darwin12.3.0 ]]; then
   alias ll.="ls -F -F -lah"
 fi
 
+alias sd="systemctl"
+alias jour="journalctl"
+alias lscg="systemd-cgls --no-pager"
+
 # colors for grep
 export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="4;36"
