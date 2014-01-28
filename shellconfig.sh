@@ -25,9 +25,13 @@ elif [[ $OSTYPE == darwin12.3.0 ]]; then
   alias ll.="ls -F -F -lah"
 fi
 
+alias z="zypper"
 alias sd="systemctl"
 alias jour="journalctl"
 alias lscg="systemd-cgls --no-pager"
+
+# allow aliases when using sudo
+alias sudo="sudo "
 
 # colors for grep
 export GREP_OPTIONS="--color=auto"
