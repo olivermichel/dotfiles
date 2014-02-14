@@ -7,6 +7,7 @@
 [alias]	
   s = status
   d = diff
+  ds = diff --staged
   a = add
   co = checkout
   ci = commit 
@@ -19,11 +20,9 @@
   pl = pull
   sub = submodule
   l = log --decorate --graph --date=short --pretty=format:'%C(green)%d %C(cyan)%h %C(magenta)%ad %C(yellow)%an %C(white)%s'
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+
 [push]
 	default = simple
+
+[branch]
+	autosetuprebase = always
