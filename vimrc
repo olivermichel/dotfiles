@@ -65,7 +65,11 @@ set noswapfile
 
 set mouse=a
 
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:<
+
+
+
 
 " use te for tabedit
 cabbrev te tabedit
