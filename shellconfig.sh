@@ -25,8 +25,11 @@ elif [[ $OSTYPE == darwin12.3.0 ]]; then
   alias ll.="ls -F -F -lah"
 fi
 
+alias m="make -j4"
+
 alias z="zypper"
 alias sd="systemctl"
+alias sc="systemctl"
 alias jour="journalctl"
 alias lscg="systemd-cgls --no-pager"
 
