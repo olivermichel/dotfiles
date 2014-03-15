@@ -43,19 +43,18 @@ set laststatus=2                                  " always show the status line
 set statusline=
 set statusline+=\[%n\]                            " buffer number
 set statusline+=\[%f/%{strlen(&ft)?&ft:'?'}]      " filename and type
-set statusline+=\[%h%m%r%w\]                      " status flags
+set statusline+=%h%m%r%w                          " status flags
 set statusline+=%=                                " right align remainder
 set statusline+=\[%l/%L\]                         " line/total lines
 
 set ruler
 
 set noexpandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set copyindent
 set preserveindent
-set softtabstop=0
-set shiftwidth=3
-set shiftround
-set tabstop=3
 set smarttab
 
 set cursorline
@@ -67,9 +66,6 @@ set mouse=a
 
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:<
-
-
-
 
 " use te for tabedit
 cabbrev te tabedit
