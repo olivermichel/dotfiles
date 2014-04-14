@@ -14,7 +14,7 @@ if [[ $OSTYPE == linux-gnu ]]; then
   alias ll="ls -F --color=auto -lh"
   alias lla="ls -F --color=auto -lah"
   alias ll.="ls -F --color=auto -lah"
-elif [[ $OSTYPE == darwin12.3.0 ]]; then
+elif [[ $OSTYPE == darwin13.0.0 ]]; then
   export LSCOLORS="gxfxbxbxcxhxhxcxcxgxgx"
   alias l="ls -F -G"
   alias ls="ls -F -G"
@@ -41,7 +41,7 @@ export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="4;36"
 
 # set input mode to emacs-mode
-set -o emacs
+set -o vi
 
 # some aliases
 alias c="clear"
