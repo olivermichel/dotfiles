@@ -18,7 +18,7 @@ set encoding=utf-8
 
 " syntax coloring
 syntax enable
-colorscheme grb256 
+colorscheme sorcerer
 set background=dark
 
 " enable wildmenu
