@@ -18,7 +18,7 @@ set encoding=utf-8
 
 " syntax coloring
 syntax enable
-colorscheme sorcerer
+colorscheme hybrid
 set background=dark
 
 " enable wildmenu
@@ -48,6 +48,9 @@ set statusline+=%=                                " right align remainder
 set statusline+=\[%l/%L\]                         " line/total lines
 
 set ruler
+
+" always show tabbar
+set showtabline=2
 
 set noexpandtab
 set tabstop=4
