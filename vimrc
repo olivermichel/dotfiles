@@ -1,76 +1,47 @@
-let &t_Co=256
 
-" line numbers
-set number
+call plug#begin('~/.vim/plugged')
 
-" history
-set history=700
+	Plug 'w0ng/vim-hybrid'
 
-" filetype extensions
-filetype plugin on
-filetype indent on
+call plug#end()
 
-" re-read file when modified externally
-set autoread
+set nocompatible         " use vim defaults instead of vi
+set encoding=utf-8       " always encode in utf
 
-set scrolloff=999
-set encoding=utf-8
-
-" syntax coloring
-syntax enable
+filetype plugin indent on
+syntax on
 colorscheme hybrid
-set background=dark
 
-" enable wildmenu
-set wildmenu
+set cursorline            " visual indicator of current line
+set fcs=vert:│,fold:-     " solid instead of broken line for vert splits
+set laststatus=2          " always show status line
+set lazyredraw            " don't update screen when executing macros
+set mouse=a               " enable mouse in all modes
+set showmatch             " show bracket matches
+set number                " show line numbers
+set showcmd               " show command on last line of screen
+set title                 " use filename in window title
+set wildmenu              " enhanced cmd line completion
 
-" try to be smart about cases when searching
-set smartcase
+set autoindent            " copy indent from previous line
+set noexpandtab           " don't replace tabs with spaces
+set shiftwidth=4          " spaces for autoindenting
+set smarttab              " <BS> removes shiftwidth worth of spaces
+set softtabstop=4         " spaces for editing, e.g. <Tab> or <BS>
+set tabstop=4             " spaces for <Tab>
 
-" height of the command bar
-set cmdheight=1
+set hlsearch              " highlight search results
+set incsearch             " search whilst typing
+set ignorecase            " case insensitive searching
+set smartcase             " override ignorecase if upper case typed
 
-" highlight search results
-set hlsearch
+set showtabline=2         " always show tabbar
 
-" incremental search
-set incsearch
+set statusline=%n:\ %F\ %m%r%h%w[%{&ff}]%y%=%l/%L/%p%%\ 
 
-" show matching brackets when cursor over bracket
-set showmatch
+set list                  " show some invisibles
+set listchars=tab:▸\ ,trail:~,extends:>,precedes:<
 
-set laststatus=2                                  " always show the status line
-set statusline=
-set statusline+=\[%n\]                            " buffer number
-set statusline+=\[%f/%{strlen(&ft)?&ft:'?'}]      " filename and type
-set statusline+=%h%m%r%w                          " status flags
-set statusline+=%=                                " right align remainder
-set statusline+=\[%l/%L\]                         " line/total lines
-
-set ruler
-
-" always show tabbar
-set showtabline=2
-
-set noexpandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set copyindent
-set preserveindent
-set smarttab
-
-set cursorline
-
-set nobackup
-set noswapfile
-
-set mouse=a
-
-nmap <leader>l :set list!<CR>
-set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:<
-
-" use te for tabedit
 cabbrev te tabedit
 cabbrev t newtab
 
