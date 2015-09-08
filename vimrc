@@ -1,8 +1,8 @@
 
 call plug#begin('~/.vim/plugged')
-
 	Plug 'w0ng/vim-hybrid'
-
+	Plug 'kien/ctrlp.vim'
+	Plug 'scrooloose/nerdtree'
 call plug#end()
 
 set nocompatible         " use vim defaults instead of vi
@@ -34,6 +34,7 @@ if has("autocmd")
 	" filetype-specfific settings
 	autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab
 	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType ruby setlocal ts=2 sts=2 sw=2 noexpandtab
 endif
 
 set hlsearch              " highlight search results
@@ -49,5 +50,6 @@ set list                  " show some invisibles
 set listchars=tab:▸\ ,trail:~,extends:>,precedes:<
 
 cabbrev te tabedit
-cabbrev t newtab
+cabbrev tc tabclose
 
+map <C-n> :NERDTreeToggle<CR>
