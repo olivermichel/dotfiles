@@ -1,4 +1,3 @@
-
 call plug#begin('~/.vim/plugged')
 	Plug 'w0ng/vim-hybrid'
 	Plug 'kien/ctrlp.vim'
@@ -32,9 +31,12 @@ set tabstop=4             " spaces for <Tab>
 
 if has("autocmd")
 	" filetype-specfific settings
-	autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab
-	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-	autocmd FileType ruby setlocal ts=2 sts=2 sw=2 noexpandtab
+	autocmd FileType make     setlocal ts=4 sts=4 sw=4 noexpandtab
+	autocmd FileType yaml     setlocal ts=2 sts=2 sw=2 expandtab
+	autocmd FileType ruby     setlocal ts=2 sts=2 sw=2 noexpandtab
+	autocmd FileType cpp      setlocal ts=3 sts=3 sw=3 noexpandtab
+	autocmd FileType c        setlocal ts=3 sts=3 sw=3 noexpandtab
+	autocmd FileType plaintex setlocal ts=3 sts=3 sw=3 noexpandtab
 endif
 
 set hlsearch              " highlight search results
@@ -48,8 +50,5 @@ set statusline=%n:\ %F\ %m%r%h%w[%{&ff}]%y%=%l/%L/%p%%\
 
 set list                  " show some invisibles
 set listchars=tab:▸\ ,trail:~,extends:>,precedes:<
-
-cabbrev te tabedit
-cabbrev tc tabclose
 
 map <C-n> :NERDTreeToggle<CR>
