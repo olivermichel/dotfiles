@@ -14,7 +14,7 @@ if [[ $OSTYPE == linux-gnu ]]; then
   alias ll="ls -F --color=auto -lh"
   alias lla="ls -F --color=auto -lah"
   alias ll.="ls -F --color=auto -lah"
-elif [[ $OSTYPE == darwin14.0 ]]; then
+elif [[ $OSTYPE == darwin15.0 ]]; then
   export LSCOLORS=gxfxcxdxbxegedabagacedxgx
   alias l="ls -G"
   alias ls="ls -G"
