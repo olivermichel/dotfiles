@@ -23,6 +23,7 @@ elif [[ $OSTYPE == darwin15.0 ]]; then
   alias ll="ls -G -lh"
   alias lla="ls -G -lah"
   alias ll.="ls -lah"
+  alias a=archey
 fi
 
 alias m="make -j4"
