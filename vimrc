@@ -10,6 +10,7 @@ set encoding=utf-8       " always encode in utf
 filetype plugin indent on
 syntax on
 colorscheme hybrid
+set background=dark
 
 set cursorline            " visual indicator of current line
 set fcs=vert:│,fold:-     " solid instead of broken line for vert splits
