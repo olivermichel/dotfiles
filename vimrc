@@ -22,7 +22,7 @@ set number                " show line numbers
 set showcmd               " show command on last line of screen
 set title                 " use filename in window title
 set wildmenu              " enhanced cmd line completion
-set wildignore+=*.a,*.o,.DS_Store,.git,*~,*.swp,*.tmp
+set wildignore+=*.a,*.o,.DS_Store,.git,*~,*.swp,*.tmp,*.aux,*.bbl,*.blg
 
 set autoindent            " copy indent from previous line
 set noexpandtab           " don't replace tabs with spaces
