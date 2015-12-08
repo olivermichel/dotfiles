@@ -27,9 +27,8 @@ elif [[ $OSTYPE == darwin15.0 ]]; then
 fi
 
 alias m="make -j4"
-
+alias be="bundle exec"
 alias z="zypper"
-alias sd="systemctl"
 alias sc="systemctl"
 alias jour="journalctl"
 alias lscg="systemd-cgls --no-pager"
@@ -41,7 +40,7 @@ alias sudo="sudo "
 export GREP_OPTIONS="--color=auto"
 export GREP_COLOR="4;36"
 
-# set input mode to emacs-mode
+# set input mode to vi-mode
 set -o vi
 
 # some aliases
@@ -165,3 +164,4 @@ py_info() {
   python_version=$(pyenv version 2> /dev/null) || return
   echo "‹p$python_version" | sed 's/[ \t].*$/›/'
 }
+

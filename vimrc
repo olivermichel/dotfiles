@@ -38,8 +38,8 @@ if has("autocmd")
 	autocmd FileType ruby     setlocal ts=2 sts=2 sw=2 noexpandtab
 	autocmd FileType cpp      setlocal ts=3 sts=3 sw=3 noexpandtab
 	autocmd FileType c        setlocal ts=3 sts=3 sw=3 noexpandtab
-	autocmd FileType plaintex setlocal ts=3 sts=3 sw=3 noexpandtab
-endif
+	autocmd FileType plaintex setlocal ts=3 sts=3 sw=3 noexpandtab tw=80 wm=2
+end
 
 set hlsearch              " highlight search results
 set incsearch             " search whilst typing
