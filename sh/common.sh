@@ -50,15 +50,18 @@ git_branch()
 
 rbenv_version()
 {
-  local ruby_version
-  ruby_version=$(rbenv version 2> /dev/null) || return
-  echo "‹r$ruby_version" | sed 's/[ \t].*$/›/'
+  local ruby_version=$(rbenv version-name 2> /dev/null) || return
+
+  if [ $ruby_version != "system" ]; then
+    echo "‹ruby-$ruby_version›"
+  fi
 }
 
 pyenv_version()
 {
-  local python_version
-  python_version=$(pyenv version 2> /dev/null) || return
-  echo "‹p$python_version" | sed 's/[ \t].*$/›/'
-}
+  local python_version=$(pyenv version-name 2> /dev/null) || return
 
+  if [ $python_version != "system" ]; then
+    echo "‹python-$python_version›"
+  fi
+}
