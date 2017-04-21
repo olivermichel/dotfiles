@@ -1,15 +1,20 @@
 
 # platform-independent aliases
-alias m="make -j4"
-alias be="bundle exec"
-alias c="clear"
 alias tree="tree -FAC"
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias h='history'
-alias g=git
+
+alias b="bundle"
+alias c="clear"
+alias d="docker"
+alias dc="docker-compose"
+alias g="git"
+alias h="history"
+alias m="make -j4"
+alias t="tree -FAC"
 
 # grep configuration
 export GREP_OPTIONS="--color=auto"

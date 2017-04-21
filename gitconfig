@@ -29,3 +29,6 @@
 [core]
 	autocrlf = input
 	editor = /usr/bin/vim
+[user]
+	email = oliver.michel@editum.de
+	name = Oliver Michel

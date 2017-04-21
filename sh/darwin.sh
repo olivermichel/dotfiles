@@ -20,4 +20,3 @@ loads()
 {
 	uptime | cut -d "," -f 4-5 | awk '{print $3,$4,$5}'
 }
-
