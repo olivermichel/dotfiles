@@ -49,7 +49,7 @@ git_branch()
 {
   branch=$(git symbolic-ref HEAD 2> /dev/null)
   if [ "$branch" != "" ]; then
-    echo \($(basename $branch)$(git_info)\)
+    echo $(basename $branch)$(git_info)
   fi
 }
 
@@ -58,7 +58,17 @@ rbenv_version()
   local ruby_version=$(rbenv version-name 2> /dev/null) || return
 
   if [ $ruby_version != "system" ]; then
-    echo "‹ruby-$ruby_version›"
+    echo $ruby_version
+  else
+    return 1
+  fi
+}
+
+rbenv_gemset() {
+  if [[ -f .rbenv-gemsets ]]; then
+    echo "/$(rbenv gemset active | cut -d ' ' -f 1)"
+  else
+    return 1
   fi
 }
 
@@ -67,6 +77,6 @@ pyenv_version()
   local python_version=$(pyenv version-name 2> /dev/null) || return
 
   if [ $python_version != "system" ]; then
-    echo "‹python-$python_version›"
+    echo $python_version
   fi
 }
