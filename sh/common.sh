@@ -77,6 +77,6 @@ pyenv_version()
   local python_version=$(pyenv version-name 2> /dev/null) || return
 
   if [ $python_version != "system" ]; then
-    echo $python_version
+    echo "$python_version "
   fi
 }
