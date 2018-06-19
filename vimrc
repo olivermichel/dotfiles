@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
-	Plug 'w0ng/vim-hybrid'
 	Plug 'kien/ctrlp.vim'
-	Plug 'scrooloose/nerdtree'
+	Plug 'joshdick/onedark.vim'
+	Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 set nocompatible         " use vim defaults instead of vi
@@ -9,8 +9,8 @@ set encoding=utf-8       " always encode in utf
 
 filetype plugin indent on
 syntax on
-colorscheme hybrid
 set background=dark
+colorscheme onedark
 
 set cursorline            " visual indicator of current line
 set fcs=vert:│,fold:-     " solid instead of broken line for vert splits
@@ -48,9 +48,7 @@ set smartcase             " override ignorecase if upper case typed
 
 set showtabline=2         " always show tabbar
 
-set statusline=%n:\ %F\ %m%r%h%w[%{&ff}]%y%=%l/%L/%p%%\ 
+set statusline=%n:\ %F\ %m%r%h%w[%{&ff}]%y%=%l/%L
 
-set list                  " show some invisibles
+set nolist                " hide invisibles
 set listchars=tab:▸\ ,trail:~,extends:>,precedes:<
-
-map <C-n> :NERDTreeToggle<CR>
