@@ -16,10 +16,6 @@ alias h="history"
 alias m="make -j4"
 alias t="tree -FAC"
 
-# grep configuration
-export GREP_OPTIONS="--color=auto"
-export GREP_COLOR="4;36"
-
 # vi input mode
 set -o vi
 
