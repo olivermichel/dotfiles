@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'joshdick/onedark.vim'
 	Plug 'airblade/vim-gitgutter'
 	Plug 'scrooloose/nerdcommenter'
-	Plug 'valloric/youcompleteme'
 call plug#end()
 
 set nocompatible         " use vim defaults instead of vi
