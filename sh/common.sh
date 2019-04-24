@@ -44,7 +44,7 @@ git_info()
 git_branch()
 {
   branch=$(git symbolic-ref HEAD 2> /dev/null)
-  if [ "$branch" != "" ]; then
+  if [[ "$branch" != "" ]]; then
     echo $(basename $branch)$(git_info)
   fi
 }
@@ -53,7 +53,7 @@ rbenv_version()
 {
   local ruby_version=$(rbenv version-name 2> /dev/null) || return
 
-  if [ $ruby_version != "system" ]; then
+  if [[ $ruby_version != "system" ]]; then
     echo $ruby_version
   else
     return 1
@@ -68,11 +68,11 @@ rbenv_gemset() {
   fi
 }
 
-pyenv_version()
-{
-  local python_version=$(pyenv version-name 2> /dev/null) || return
-
-  if [ $python_version != "system" ]; then
-    echo "$python_version "
-  fi
-}
+# pyenv_version()
+# {
+#   local python_version=$(pyenv version-name 2> /dev/null) || return
+#
+#   if [ $python_version != "system" ]; then
+#     echo "$python_version "
+#   fi
+# }
