@@ -49,7 +49,7 @@ git_branch()
 {
   branch=$(git symbolic-ref HEAD 2> /dev/null)
   if [[ "$branch" != "" ]]; then
-    echo $(basename $branch)$(git_status)
+    echo " $(basename $branch)$(git_status)"
   fi
 }
 
