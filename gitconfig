@@ -30,9 +30,6 @@
 	autocrlf = input
 	editor = /usr/bin/vim
 	excludesfile = ~/.dotfiles/gitignore
-[user]
-	email = oliver.michel@editum.de
-	name = Oliver Michel
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
