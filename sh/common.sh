@@ -71,3 +71,9 @@ rbenv_gemset() {
     return 1
   fi
 }
+
+renv() {
+  set -a
+  [ -f .env ] && . .env
+  set +a
+}
