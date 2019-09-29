@@ -20,18 +20,3 @@
   pl = pull
   sub = submodule
   l = log --decorate --graph --date=short --pretty=format:'%C(green)%d %C(cyan)%h %C(magenta)%ad %C(yellow)%an %C(white)%s'
-
-[push]
-	default = simple
-
-[branch]
-	autosetuprebase = always
-[core]
-	autocrlf = input
-	editor = /usr/bin/vim
-	excludesfile = ~/.dotfiles/gitignore
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
