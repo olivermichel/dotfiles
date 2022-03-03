@@ -51,6 +51,10 @@ git_branch()
   fi
 }
 
+function __virtualenv_ps1 {
+    echo "${VIRTUAL_ENV:+${VIRTUAL_ENV##*/}}"
+}
+
 renv() {
   set -a
   [ -f .env ] && . .env
